@@ -15,7 +15,7 @@ app.get('/', function(re, res) {
     </head>
     <body>
       <div class="container">
-        <h1 class="display-4 text-center py-1">To-Do App</h1>
+        <h1 class="display-4 text-center py-1">Real Time To-Do App</h1>
         
         <div class="jumbotron p-3 shadow-sm">
           <form action = "/create-item" method = "POST">
