@@ -2,9 +2,10 @@ let express = require('express')
 
 let app = express()
 
+app.use(express.urlencoded({extended: false}))
+
 app.get('/', function(re, res) {
-    res.send(`
-    <!DOCTYPE html>
+    res.send(`<!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
@@ -52,13 +53,12 @@ app.get('/', function(re, res) {
       </div>
       
     </body>
-    </html>
-    `)
+    </html>`)
 })
-
+ 
 app.post('/create-item', function() {
-    console.log("make this dynamic website from now")
-    res.send("Thanks for submitting the form.)
-})
-
+    console.log('req.body.item')
+    res.send("Thanks for submitting the form")
+})  
+ 
 app.listen(3000)
